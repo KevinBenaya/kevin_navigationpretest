@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const MaterialApp(
+    title: 'Navigation Basics',
+    home: FirstRoute(),
+  ));
+}
+
 class FirstRoute extends StatelessWidget {
   const FirstRoute({Key? key}) : super(key: key);
 
@@ -36,7 +43,7 @@ class SecondRoute extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Navigate back to first route when tapped.
+            Navigator.pop(context);
           },
           child: const Text('Go back!'),
         ),
