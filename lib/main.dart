@@ -12,7 +12,12 @@ class FirstRoute extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           child: const Text('Open Route'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SecondRoute()),
+            );
+          },
         ),
       ),
     );
