@@ -53,7 +53,9 @@ class SelectionScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, 'Yep!');
+                },
                 child: const Text('Yep!'),
               ),
             ),
@@ -61,7 +63,7 @@ class SelectionScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context, 'Yep!');
+                  Navigator.pop(context, 'Nope.');
                 },
                 child: const Text('Nope.'),
               ),
