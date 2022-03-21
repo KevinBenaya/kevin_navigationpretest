@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
+      routes: {
+        ExtractArgumentScreen.routeName: ((context) => 
+        const ExtractArgumentScreen(),
+      },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
           final args = settings.arguments as ScreenArguments;
@@ -33,6 +37,8 @@ class ScreenArguments {
 
 class ExtractArgumentScreen extends StatelessWidget {
   const ExtractArgumentScreen({Key? key}) : super(key: key);
+
+  static const routeName = '/extractArguments';
 
   @override
   Widget build(BuildContext context) {
