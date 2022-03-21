@@ -24,7 +24,9 @@ class FirstScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/second');
+          },
           child: const Text('Launch Screen'),
         ),
       ),
