@@ -28,3 +28,11 @@ class SelectionButton extends StatelessWidget {
       child: const Text('Pick an option, any option!'),
     );
   }
+
+  void _navigateAndDisplaySelection(BuildContext context) async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SelectionScreen()),
+    );
+  }
+}
