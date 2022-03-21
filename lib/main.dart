@@ -24,9 +24,11 @@ class MyApp extends StatelessWidget {
             },
           );
         }
-        assert(false, 'Need to implement${settings.name}');
+        assert(false, 'Need to implement ${settings.name}');
         return null;
       },
+      title: 'Navigation with Arguments',
+      home: const HomeScreen(),
     );
   }
 }
