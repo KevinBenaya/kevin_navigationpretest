@@ -48,16 +48,6 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(
                   context,
-                  ExtractArgumentScreen.routeName,
-                  arguments: ScreenArguments(),
-                );
-              },
-              child: const Text('Navigate to screen that extracts arguments'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
                   PassArgumentsScreen.routeName,
                   arguments: ScreenArguments(
                     'Accept Arguments Screen',
