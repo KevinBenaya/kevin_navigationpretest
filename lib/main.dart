@@ -15,3 +15,16 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+class SelectionButton extends StatelessWidget {
+  const SelectionButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        _navigateAndDisplaySelection(context);
+      },
+      child: const Text('Pick an option, any option!'),
+    );
+  }
