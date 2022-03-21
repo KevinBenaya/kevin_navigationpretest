@@ -1,13 +1,16 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       routes: {
-        ExtractArgumentScreen.routeName: ((context) => 
-        const ExtractArgumentScreen(),
+        ExtractArgumentScreen.routeName: (context) =>
+            const ExtractArgumentScreen(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
@@ -24,8 +27,8 @@ void main() {
         assert(false, 'Need to implement${settings.name}');
         return null;
       },
-    ),
-  );
+    );
+  }
 }
 
 class ScreenArguments {
@@ -79,4 +82,3 @@ class PassArgumentsScreen extends StatelessWidget {
     );
   }
 }
-
