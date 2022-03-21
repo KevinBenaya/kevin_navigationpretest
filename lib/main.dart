@@ -34,6 +34,9 @@ class SelectionButton extends StatelessWidget {
       context,
       MaterialPageRoute(builder: (context) => const SelectionScreen()),
     );
+    ScaffoldMessenger.of(context)
+      ..removeCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text('$result')));
   }
 }
 
